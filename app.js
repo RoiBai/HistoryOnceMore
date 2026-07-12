@@ -2748,6 +2748,7 @@ function characterName(id) {
 }
 
 function render() {
+  document.body.classList.toggle("ending-mode", state.screen === "ending");
   if (state.screen === "start") renderStart();
   if (state.screen === "story") renderStory();
   if (state.screen === "role") renderRoleSelect();

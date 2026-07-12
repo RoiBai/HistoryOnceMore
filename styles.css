@@ -776,14 +776,20 @@ ol {
   padding-bottom: 24px;
 }
 
-.screen-ending {
-  height: 100vh;
-  min-height: 0;
+body.ending-mode {
+  height: auto;
+  min-height: 100%;
   overflow-x: hidden;
-  overflow-y: auto;
-  overscroll-behavior-y: contain;
+  overflow-y: scroll;
+  overscroll-behavior-y: auto;
   touch-action: pan-y;
   -webkit-overflow-scrolling: touch;
+}
+
+body.ending-mode .screen-ending {
+  height: auto;
+  min-height: 100vh;
+  overflow: visible;
 }
 
 .screen-ending::before,
