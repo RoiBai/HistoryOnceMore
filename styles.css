@@ -777,8 +777,18 @@ ol {
 }
 
 .screen-ending {
+  height: 100vh;
+  min-height: 0;
   overflow-x: hidden;
   overflow-y: auto;
+  overscroll-behavior-y: contain;
+  touch-action: pan-y;
+  -webkit-overflow-scrolling: touch;
+}
+
+.screen-ending::before,
+.screen-ending::after {
+  position: fixed;
 }
 
 .ending-header {
